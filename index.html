@@ -1,93 +1,95 @@
-t<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Expat assurance </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Vide</title>
 </head>
 <body>
-
-    <!-- The chatbot container -->
-    <div id="chat-window" class="chat-window"></div>
-
-  <script type="module">
+<script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "6ee82ccb-c145-464e-a66c-f6e4b9e538d2",
         apiHost: "https://flowiseai-railway-production-7641.up.railway.app",
         chatflowConfig: {
-              },
-            theme: {
-                button: {
+            // topK: 2
+        },
+        theme: {
+            button: {
+                backgroundColor: "#3B81F6",
+                right: 20,
+                bottom: 20,
+                size: 48, // small | medium | large | number
+                dragAndDrop: true,
+                iconColor: "white",
+                customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                autoWindowOpen: {
+                    autoOpen: true, //parameter to control automatic window opening
+                    openDelay: 2, // Optional parameter for delay time in seconds
+                    autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+                    },
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Hello 👋!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16,
+            },
+            chatWindow: {
+                showTitle: true,
+                title: 'Flowise Bot',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                showAgentMessages: true,
+                welcomeMessage: 'Bonjour, pose moi toutes tes questions sur nos assurances MSH, APRIL et Allianz',
+                errorMessage: 'reformule ta question s'il te ^lait',
+                backgroundColor: "#ffffff",
+                backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+                starterPromptFontSize: 15,
+                clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+                botMessage: {
+                    backgroundColor: "#f7f8ff",
+                    textColor: "#303235",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                },
+                userMessage: {
                     backgroundColor: "#3B81F6",
-                    right: 20,
-                    bottom: 20,
-                    size: 48, // small | medium | large | number
-                    dragAndDrop: true,
-                    iconColor: "white",
-                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-                    autoWindowOpen: {
-                        autoOpen: true, // Automatically open the chat window
-                        openDelay: 2, // Delay time in seconds
-                        autoOpenOnMobile: false,
-                    },
+                    textColor: "#ffffff",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
                 },
-                tooltip: {
-                    showTooltip: true,
-                    tooltipMessage: ' Bonjour 👩‍⚕️!',
-                    tooltipBackgroundColor: 'black',
-                    tooltipTextColor: 'white',
-                    tooltipFontSize: 16,
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                    autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                    sendMessageSound: true,
+                    // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                    receiveMessageSound: true,
+                    // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
                 },
-                chatWindow: {
-                    showTitle: true,
-                    title: "Expat assurance AI assistant",
-                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-                    showAgentMessages: true,
-                    welcomeMessage: 'Posez moi toutes vos questions à propose de nos assurances MSH, APRIL et Allianz !',
-                    errorMessage: 'Pouvez vous clarifier votre demande.',
-                    backgroundColor: "#ffffff",
-                    backgroundImage: 'https://path-to-image.com/background.jpg', // Provide a valid image path or link
-                    height: 500,
-                    width: 400,
-                    fontSize: 16,
-                    starterPromptFontSize: 15,
-                    clearChatOnReload: true,
-                    botMessage: {
-                        backgroundColor: "#f7f8ff",
-                        textColor: "#303235",
-                        showAvatar: true,
-                        avatarSrc: "https://raw.githubusercontent.com/tanguy-tamashi/Stay-n-Sip-demo/main/378314446_631805229135284_8106464424122137395_n.jpg",
-                    },
-                    userMessage: {
-                        backgroundColor: "#3B81F6",
-                        textColor: "#ffffff",
-                        showAvatar: false, // Set to true if you want to display the user's avatar
-                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
-                    },
-                    textInput: {
-                        placeholder: 'Type your question',
-                        backgroundColor: '#ffffff',
-                        textColor: '#303235',
-                        sendButtonColor: '#3B81F6',
-                        autoFocus: true,
-                        sendMessageSound: true,
-                        receiveMessageSound: true,
-                    },
-                    feedback: {
-                        color: '#303235',
-                    },
-                    footer: {
-                        textColor: '#303235',
-                        text: 'Powered by',
-                        company: 'MincaAI',
-                        companyLink: 'https://mincaai.framer.ai/',
-                    }
+                feedback: {
+                    color: '#303235',
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'MincaAI',
+                    companyLink: '',
                 }
             }
-        });
-    </script>
+        }
+    })
+</script>
+
     
 </body>
 </html>
