@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Expat Assurance AI assitant Proto</title>
+    <title>Stay'n Sip - Wine Tasting Experiences</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,11 +11,11 @@
     <!-- The chatbot container -->
     <div id="chat-window" class="chat-window"></div>
 
- <script type="module">
+   <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "6ee82ccb-c145-464e-a66c-f6e4b9e538d2",
-        apiHost: "https://flowiseai-railway-production-7641.up.railway.app",
+        apiHost: "https://mincaai.app.flowiseai.com",
         chatflowConfig: {
               },
             theme: {
@@ -35,17 +35,18 @@
                 },
                 tooltip: {
                     showTooltip: true,
-                    tooltipMessage: 'Hi There 👩‍⚕️!',
+                    tooltipMessage: 'Hi There 🍷!',
                     tooltipBackgroundColor: 'black',
                     tooltipTextColor: 'white',
                     tooltipFontSize: 16,
                 },
                 chatWindow: {
                     showTitle: true,
-                    title: "Expat Assurance AI Assistant",
+                    title: "Stay'n Sip AI Assistant",
+                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                     showAgentMessages: true,
-                    welcomeMessage: 'Salut, pose moi la question que tu veux sur nos assurances (April, MSH, Allianz) !',
-                    errorMessage: 'Oops, je n'ai pas accès à cette info.',
+                    welcomeMessage: 'Hello! Ask us anything about your wine experience!',
+                    errorMessage: 'Oops, I didn\'t understand that.',
                     backgroundColor: "#ffffff",
                     backgroundImage: 'https://path-to-image.com/background.jpg', // Provide a valid image path or link
                     height: 500,
