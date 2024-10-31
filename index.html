@@ -6,7 +6,7 @@
     <title>Page Vide</title>
 </head>
 <body>
-<script type="module">
+    <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "6ee82ccb-c145-464e-a66c-f6e4b9e538d2",
@@ -31,7 +31,7 @@
             },
             tooltip: {
                 showTooltip: true,
-                tooltipMessage: 'Hello 👋!',
+                tooltipMessage: 'Hi There 👋!',
                 tooltipBackgroundColor: 'black',
                 tooltipTextColor: 'white',
                 tooltipFontSize: 16,
@@ -41,8 +41,8 @@
                 title: 'Flowise Bot',
                 titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                 showAgentMessages: true,
-                welcomeMessage: 'Bonjour, pose moi toutes tes questions sur nos assurances MSH, APRIL et Allianz',
-                errorMessage: 'reformule ta question s'il te ^lait',
+                welcomeMessage: 'Pose moi tes question sur nos assurances MSH, Allianz et April',
+                errorMessage: 'laisse moi réfléchir',
                 backgroundColor: "#ffffff",
                 backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
                 height: 700,
@@ -68,8 +68,6 @@
                     backgroundColor: '#ffffff',
                     textColor: '#303235',
                     sendButtonColor: '#3B81F6',
-                    maxChars: 50,
-                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
                     autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
                     sendMessageSound: true,
                     // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
@@ -83,13 +81,12 @@
                     textColor: '#303235',
                     text: 'Powered by',
                     company: 'MincaAI',
-                    companyLink: '',
+                    companyLink: 'https://flowiseai.com',
                 }
             }
         }
     })
 </script>
 
-    
 </body>
 </html>
